@@ -39,6 +39,15 @@ T04-3 continues in this repository and starts the D3 bar chart that later exerci
 - The bars are not spaced yet, so they sit on top of each other and only the longest is visible. T04-6 adds scales and x/y positions.
 - The `createBarChart` stub was removed from `t04-4-load.js`, and `index.html` loads `t04-4-load.js` then `t04-5-bars.js` after D3.
 
+## T04-6: Scaling charts
+
+`t04-5-bars.js` now uses D3 scales so the bars always fit inside the SVG.
+
+- The SVG has a logical coordinate system (`viewBox` 500 × 1600) and an explicit display size (640 × 420 pixels).
+- `d3.scaleLinear()` maps counts from 0 to the highest count onto 0 to 500, so the longest bar fills the logical width.
+- `d3.scaleBand()` gives each brand its own row from top to bottom, with `paddingInner(0.2)` between bars and `paddingOuter(0.1)` at the ends. Each bar's height is `yScale.bandwidth()`.
+- Bars are drawn in steelblue, longest first. Because the logical canvas is tall and the display box is wide, the browser scales the canvas to fit the height and centres it.
+
 ## AI use
 
 This work was completed with AI assistance. Commits that include AI-generated content are tagged `[AI-assisted]`.
