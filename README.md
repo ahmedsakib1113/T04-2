@@ -32,6 +32,13 @@ T04-3 continues in this repository and starts the D3 bar chart that later exerci
 - `index.html` now loads `t04-4-load.js` after D3. `energy-d3.js` and `t04-3-bars.js` are commented out.
 - `d3.csv` needs the page to be served over HTTP, so run it with Live Server rather than opening the file directly.
 
+## T04-5: D3 binding and drawing with data
+
+- `t04-5-bars.js` defines `createBarChart(data)`. It appends an `<svg viewBox="0 0 1200 400">` to the responsive container, then binds the rows with `selectAll("rect").data(data).join("rect")`, so there is one `<rect>` per brand.
+- Each bar gets a class from its data (for example `bar bar-859`), a width equal to its `count`, and a constant height of 16.
+- The bars are not spaced yet, so they sit on top of each other and only the longest is visible. T04-6 adds scales and x/y positions.
+- The `createBarChart` stub was removed from `t04-4-load.js`, and `index.html` loads `t04-4-load.js` then `t04-5-bars.js` after D3.
+
 ## AI use
 
 This work was completed with AI assistance. Commits that include AI-generated content are tagged `[AI-assisted]`.
