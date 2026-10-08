@@ -48,6 +48,15 @@ T04-3 continues in this repository and starts the D3 bar chart that later exerci
 - `d3.scaleBand()` gives each brand its own row from top to bottom, with `paddingInner(0.2)` between bars and `paddingOuter(0.1)` at the ends. Each bar's height is `yScale.bandwidth()`.
 - Bars are drawn in steelblue, longest first. Because the logical canvas is tall and the display box is wide, the browser scales the canvas to fit the height and centres it.
 
+## T04-7: Adding labels
+
+`t04-5-bars.js` now draws each row as a group, so a bar and its labels move together.
+
+- The T04-6 block that drew the rectangles directly is kept in the file, commented out, for reference.
+- One `<g>` is created per brand and moved into place with `transform="translate(0, yScale(brand))"`. Inside each group, the bar's `y` is 0.
+- Bars start at `x = 100`. The brand name sits to the left of the bar, right-aligned at `x = 100`, and the count sits just past the end of the bar.
+- The canvas height now depends on the number of rows (`viewBox` 500 × 280 for 10 brands), and the display size is 640 × 280.
+
 ## AI use
 
 This work was completed with AI assistance. Commits that include AI-generated content are tagged `[AI-assisted]`.
