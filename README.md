@@ -17,6 +17,14 @@ This repository starts from the T01 PowerWise website. The page body was reset t
 
 D3 v7 is loaded from `https://d3js.org/d3.v7.min.js` before `energy-d3.js`, immediately before `</body>`.
 
+## T04-3: D3 set up
+
+T04-3 continues in this repository and starts the D3 bar chart that later exercises (T04-4 to T04-7) build on.
+
+- `index.html` adds a `<div class="responsive-svg-container">` below the existing content. It now loads `t04-3-bars.js` after D3, and the T04-2 script `energy-d3.js` is commented out.
+- `css/style.css` adds `.responsive-svg-container`, which centres the chart, fills the parent width and caps it at 1200px.
+- `t04-3-bars.js` appends an `<svg>` with `viewBox="0 0 1200 1600"` and a temporary border, plus a thin blue test `<rect>`. Because of the `viewBox`, the SVG and the bar scale together when the window is resized.
+
 ## AI use
 
 This work was completed with AI assistance. Commits that include AI-generated content are tagged `[AI-assisted]`.
