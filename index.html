@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Appliance energy consumption in the Australian market">
+  <title>Home | PowerWise Appliances</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="brand" data-page="home" aria-label="PowerWise home">
+        <img src="images/logo.svg" alt="Power logo" class="brand-logo" width="52" height="52">
+        <span class="brand-name">PowerWise</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+        <li><a href="#televisions" class="nav-link" data-page="televisions">Televisions</a></li>
+        <li><a href="#about" class="nav-link" data-page="about">About Us</a></li>
+      </ul>
+    </nav>
+    <p class="current-page" aria-live="polite">You are viewing: <strong id="current-page-name">Home</strong></p>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-text">
+          <h1 id="home-title">Know what your appliances cost to run</h1>
+          <p class="lead">Household appliances account for a large share of home energy use in Australia. This site explores how much energy common appliances use, starting with televisions sold in the Australian market.</p>
+          <a href="#televisions" class="button" data-page="televisions">Explore televisions</a>
+        </div>
+        <img src="images/logo.svg" alt="" class="hero-logo" aria-hidden="true">
+      </div>
+
+      <div class="panel-grid">
+        <article class="panel">
+          <h2>The Energy Rating Label</h2>
+          <p>In Australia, many appliances must carry an Energy Rating Label. It shows a star rating (more stars means more efficient) and an estimated annual energy use in kilowatt-hours (kWh).</p>
+        </article>
+        <article class="panel">
+          <h2>Why it matters</h2>
+          <p>Two appliances of the same size can differ widely in energy use. Over the life of an appliance, the running cost can be more than the difference in purchase price.</p>
+        </article>
+        <article class="panel">
+          <h2>What is coming</h2>
+          <p>Interactive data visualisations built from Australian appliance registration data will be added to this site in later tasks.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TELEVISIONS -->
+    <section id="televisions" class="page story" aria-labelledby="tv-title" hidden>
+      <h1 id="tv-title">Buying a TV? Screen size matters more than you think</h1>
+      <p class="lead">A TV can be switched on for hours every day, so its running cost adds up over its lifetime. We looked at the energy data for 4,570 TV models currently registered for sale in Australia to answer one question: <strong>how can you choose a TV that costs less to run?</strong></p>
+
+      <nav class="story-steps" aria-label="Story sections">
+        <a href="#step-market">1. What's on sale</a>
+        <a href="#step-size">2. Size drives power</a>
+        <a href="#step-tech">3. Screen technology</a>
+        <a href="#step-stars">4. Star ratings</a>
+        <a href="#step-cost">5. Your running cost</a>
+      </nav>
+
+      <!-- Step 1: market (Q1, Q2, Q3) -->
+      <article class="story-step" id="step-market">
+        <h2>1. Most TVs on sale use LCD (LED) screens</h2>
+        <p>Of the 4,570 models available in Australia, about 83% use LCD (LED) screens. OLED, the newer premium technology, makes up only about 6% of models.</p>
+        <figure class="chart-card">
+          <div class="chart-pair">
+            <img src="images/q1-tech-bar.png" alt="Bar chart: 3,794 LCD (LED), 484 LCD and 292 OLED models" loading="lazy">
+            <img src="images/q1-tech-pie.png" alt="Pie chart showing LCD (LED) as the large majority of models" loading="lazy">
+          </div>
+          <figcaption>Number of TV models available in Australia by screen technology: LCD (LED) 3,794, LCD 484, OLED 292. Bar chart (left) and share of all models (right).</figcaption>
+        </figure>
+
+        <p>Screen sizes range from 16 to 116 inches. The most common sizes are 65 inches (851 models), 55 inches (767) and 75 inches (639).</p>
+        <figure class="chart-card">
+          <img src="images/q2-screen-sizes.png" alt="Bar chart of the number of TV models at each screen size, with 65, 55 and 75 inches the highest" loading="lazy">
+          <figcaption>Number of TV models at each screen size (inches). The tallest bars are 65", 55" and 75".</figcaption>
+        </figure>
+
+        <p>A small number of brands offer most of the choice. Samsung, Kogan and LG together account for more than half (57%) of all models.</p>
+        <figure class="chart-card">
+          <img src="images/q3-brands.png" alt="Bar chart of the 10 brands with the most TV models" loading="lazy">
+          <figcaption>Number of TV models for the 10 brands with the most models. Samsung appears twice because it is registered under two names (SAMSUNG 497 and SAMSUNG ELECTRONICS 699); combined, Samsung has 1,196 models.</figcaption>
+        </figure>
+      </article>
+
+      <!-- Step 2: size vs power (Q5) -->
+      <article class="story-step" id="step-size">
+        <h2>2. The bigger the screen, the more power it uses</h2>
+        <p>Screen size is the biggest factor in how much power a TV uses. Each dot below is one TV model. A typical TV of 32 inches or less uses about 26 watts, while a typical TV over 75 inches uses about 216 watts, more than eight times as much.</p>
+        <figure class="chart-card">
+          <img src="images/q5-size-vs-power.png" alt="Scatter plot showing power use increasing as screen size increases" loading="lazy">
+          <figcaption>Screen size (inches) against power use when switched on (watts). Each dot is one model.</figcaption>
+        </figure>
+        <p class="takeaway"><strong>What this means for you:</strong> choosing a size that suits your room is the most effective way to keep running costs down.</p>
+      </article>
+
+      <!-- Step 3: technology (Q4) -->
+      <article class="story-step" id="step-tech">
+        <h2>3. Screen technology makes almost no difference</h2>
+        <p>At first glance, standard LCD TVs have the lowest typical (median) power use. However, the typical standard LCD model is 55 inches, while LCD (LED) and OLED models are typically 65 inches.</p>
+        <figure class="chart-card">
+          <img src="images/q4-power-by-tech.png" alt="Bar chart of median power use: LCD about 71 watts, LCD (LED) 106 watts, OLED 113 watts" loading="lazy">
+          <figcaption>Median power use when switched on (watts) by screen technology: LCD 71 W, LCD (LED) 106 W, OLED 113 W.</figcaption>
+        </figure>
+        <p>When we compare power use for the same amount of screen, the difference disappears. All three technologies use about 10.5 to 10.7 watts for every 1,000 cm² of screen.</p>
+        <figure class="chart-card">
+          <div class="chart-box"><canvas id="chart-power-area" aria-label="Bar chart showing power per screen area is almost the same for all technologies" role="img"></canvas></div>
+          <figcaption>Median power use per 1,000 cm² of screen (watts) by screen technology.</figcaption>
+        </figure>
+        <p>The same applies to brands. Power use varies within every brand, and brands that mainly sell larger TVs have higher typical power use.</p>
+        <figure class="chart-card">
+          <img src="images/q7-power-by-brand.png" alt="Box plot of power use for each brand" loading="lazy">
+          <figcaption>Spread of power use (watts) for each brand. Each box shows the middle 50% of that brand's models.</figcaption>
+        </figure>
+        <p class="takeaway"><strong>What this means for you:</strong> don't choose a technology for energy reasons alone. Compare TVs of the same size instead.</p>
+      </article>
+
+      <!-- Step 4: star rating (Q6) -->
+      <article class="story-step" id="step-stars">
+        <h2>4. You can find an efficient TV at any size</h2>
+        <p>Star ratings range from about 1 to 9 stars across almost every screen size. The star rating already takes screen size into account, so it tells you how efficient a TV is compared with other TVs of the same size.</p>
+        <figure class="chart-card">
+          <img src="images/q6-size-vs-stars.png" alt="Scatter plot showing star ratings spread widely at every screen size" loading="lazy">
+          <figcaption>Screen size (inches) against star rating. Each dot is one model.</figcaption>
+        </figure>
+        <p class="takeaway"><strong>What this means for you:</strong> once you have chosen a size, pick the model with the most stars on its Energy Rating Label.</p>
+      </article>
+
+      <!-- Step 5: calculator + recommendation -->
+      <article class="story-step" id="step-cost">
+        <h2>5. Work out your running cost</h2>
+        <p>Enter a TV's power use (from the Energy Rating Label or product specifications), how long you watch each day, and your electricity price.</p>
+        <div class="calculator">
+          <label for="watts">Power use (watts)
+            <input type="number" id="watts" min="0" step="1" value="106">
+          </label>
+          <label for="hours">Hours watched per day
+            <input type="number" id="hours" min="0" max="24" step="0.5" value="5">
+          </label>
+          <label for="rate">Electricity price (cents per kWh)
+            <input type="number" id="rate" min="0" step="0.1" value="30">
+          </label>
+          <p class="result">Estimated cost: <strong id="cost-output">$0.00</strong> per year</p>
+        </div>
+        <p class="note">The default of 106 watts is the median power use of an LCD (LED) TV in this data set. Electricity prices vary by state and retailer; check your bill for your rate.</p>
+
+        <div class="summary">
+          <h2>In summary</h2>
+          <ol>
+            <li>Choose the screen size you actually need; it has the biggest effect on power use.</li>
+            <li>Compare models of that size and pick the one with the most stars.</li>
+            <li>Use the calculator above to check the yearly running cost before you buy.</li>
+          </ol>
+        </div>
+      </article>
+
+      <p class="note">Data: Australian Government Energy Rating registration data for televisions (September 2026 extract), cleaned and aggregated with KNIME. See the About Us page for details and limitations.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page" aria-labelledby="about-title" hidden>
+      <h1 id="about-title">About Us</h1>
+      <p class="lead">PowerWise is a student project built for COS30045 Data Visualisation at Swinburne University of Technology.</p>
+      <div class="panel-grid">
+        <article class="panel">
+          <h2>Purpose</h2>
+          <p>To help Australian households compare the energy use of household appliances using clear, interactive data visualisations.</p>
+        </article>
+        <article class="panel">
+          <h2>Data</h2>
+          <p>Australian Government Energy Rating registration records for televisions (tv_2026_09_08.csv), cleaned and aggregated with KNIME. Only models marked "Available" and sold in Australia are included.</p>
+        </article>
+        <article class="panel">
+          <h2>Built with</h2>
+          <p>HTML, CSS and JavaScript, version controlled on GitHub and hosted on Vercel.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Sakib Ahmed. COS30045 Data Visualisation.</p>
+    <p class="genai">GenAI acknowledgement: Claude (Anthropic) was used to help generate the HTML, CSS, JavaScript and draft text for this website. All chart values come from my own KNIME analysis. All output was reviewed and edited by the author.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
