@@ -25,6 +25,13 @@ T04-3 continues in this repository and starts the D3 bar chart that later exerci
 - `css/style.css` adds `.responsive-svg-container`, which centres the chart, fills the parent width and caps it at 1200px.
 - `t04-3-bars.js` appends an `<svg>` with `viewBox="0 0 1200 1600"` and a temporary border, plus a thin blue test `<rect>`. Because of the `viewBox`, the SVG and the bar scale together when the window is resized.
 
+## T04-4: Load data from CSV
+
+- `data/tvBrandCount.csv` holds the number of TV models for the top 10 brands (columns `brand`, `count`).
+- `t04-4-load.js` loads the file with `d3.csv`, converting `count` from a string to a number as each row is read. It logs the rows, row count, max, min and extent to the console, sorts the rows by count (highest first), and passes them to a `createBarChart(data)` stub that T04-5 will implement.
+- `index.html` now loads `t04-4-load.js` after D3. `energy-d3.js` and `t04-3-bars.js` are commented out.
+- `d3.csv` needs the page to be served over HTTP, so run it with Live Server rather than opening the file directly.
+
 ## AI use
 
 This work was completed with AI assistance. Commits that include AI-generated content are tagged `[AI-assisted]`.
